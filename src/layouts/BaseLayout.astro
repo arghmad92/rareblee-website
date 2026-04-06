@@ -18,7 +18,24 @@ const { title = "RareBlee — Glow Different", description = "Glow Drop Body Fil
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:image" content="/images/products/flatlay-editorial.jpeg" />
+    <meta property="og:url" content="https://rareblee.com" />
+    <meta property="og:site_name" content="RareBlee" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="/images/products/flatlay-editorial.jpeg" />
     <title>{title}</title>
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "RareBlee",
+      "url": "https://rareblee.com",
+      "logo": "https://rareblee.com/images/logo/Rareblee Logo Green.png",
+      "description": "Glow Drop Body Filter Deodorant by RareBlee. Natural, skin-safe deodorant.",
+      "contactPoint": { "@type": "ContactPoint", "email": "hello@rareblee.com", "contactType": "customer service" },
+      "sameAs": ["https://instagram.com/rareblee.my", "https://tiktok.com/@rareblee"]
+    })} />
 
     <style is:global>
       @font-face {

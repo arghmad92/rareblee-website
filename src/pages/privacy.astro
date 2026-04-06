@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Privacy Policy — RareBlee" description="RareBlee privacy policy. How we handle your data.">
+  <Navbar />
+  <main class="privacy-page">
+    <div class="container">
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: April 7, 2026</p>
+
+      <section>
+        <h2>Who We Are</h2>
+        <p>RareBlee is a Malaysian body care brand. Our website is rareblee.com. SSM Registration: 202303207070 (MA0305189-M).</p>
+      </section>
+
+      <section>
+        <h2>Information We Collect</h2>
+        <p>We collect minimal information:</p>
+        <ul>
+          <li><strong>Newsletter signup:</strong> Your email address, only if you voluntarily subscribe.</li>
+          <li><strong>Analytics:</strong> Anonymous visitor count via a third-party counter service. No personal data is tracked.</li>
+          <li><strong>Cookies:</strong> We do not use cookies on this website.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>How We Use Your Information</h2>
+        <ul>
+          <li>To send you product updates and offers (newsletter subscribers only).</li>
+          <li>To understand how many people visit our website (anonymous count only).</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Third-Party Services</h2>
+        <ul>
+          <li><strong>Cloudflare:</strong> Hosts our website and provides CDN/security services.</li>
+          <li><strong>Shopee:</strong> Our shop links redirect to Shopee Malaysia for purchases. Shopee has its own privacy policy.</li>
+          <li><strong>CounterAPI:</strong> Anonymous visitor counter. No personal data is collected.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Your Rights</h2>
+        <p>You can request to unsubscribe from our newsletter at any time by contacting us. We do not sell or share your personal data with third parties for marketing purposes.</p>
+      </section>
+
+      <section>
+        <h2>Contact Us</h2>
+        <p>If you have questions about this privacy policy, contact us at <a href="mailto:hello@rareblee.com">hello@rareblee.com</a>.</p>
+      </section>
+
+      <a href="/" class="back-link">Back to Home</a>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .privacy-page {
+    padding: 140px 0 80px;
+    min-height: 60vh;
+  }
+
+  .privacy-page h1 {
+    font-size: 2.5rem;
+    color: var(--green);
+    margin-bottom: 8px;
+  }
+
+  .updated {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-bottom: 48px;
+  }
+
+  .privacy-page section {
+    margin-bottom: 36px;
+  }
+
+  .privacy-page h2 {
+    font-size: 1.3rem;
+    color: var(--green);
+    margin-bottom: 12px;
+  }
+
+  .privacy-page p,
+  .privacy-page li {
+    font-size: 0.92rem;
+    line-height: 1.8;
+    color: var(--text);
+  }
+
+  .privacy-page ul {
+    padding-left: 20px;
+    margin-top: 8px;
+  }
+
+  .privacy-page li {
+    margin-bottom: 8px;
+  }
+
+  .privacy-page a {
+    color: var(--green);
+    text-decoration: underline;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-top: 32px;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+</style>
