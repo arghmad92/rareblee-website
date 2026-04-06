@@ -159,10 +159,11 @@
   @media (max-width: 768px) {
     .nav-toggle {
       display: flex;
+      z-index: 200;
     }
 
     .nav-links {
-      display: none;
+      display: none !important;
       position: fixed;
       top: 0;
       left: 0;
@@ -173,16 +174,26 @@
       justify-content: center;
       align-items: center;
       gap: 32px;
-      z-index: 99;
-    }
-
-    .nav-links a {
-      font-size: 1.2rem;
+      z-index: 150;
+      padding: 80px 24px;
     }
 
     .nav-links.open {
-      display: flex;
+      display: flex !important;
       animation: fadeIn 0.3s var(--ease-out-expo);
+    }
+
+    .nav-links li {
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    .nav-links a::after {
+      display: none;
     }
 
     @keyframes fadeIn {
