@@ -329,22 +329,14 @@ const { title = "RareBlee — Glow Different", description = "Glow Drop Body Fil
         }
       });
 
-      // Visitor counter
-      fetch('/api/visitors')
+      // Visitor counter (same service as kronibola.com)
+      fetch('https://api.counterapi.dev/v1/rareblee/visitors/up')
         .then(r => r.json())
         .then(d => {
           const el = document.getElementById('visitorCount');
-          const wrap = el?.closest('.visitor-counter');
-          if (el && d.count > 0) {
-            el.textContent = d.count.toLocaleString();
-          } else if (wrap) {
-            wrap.style.display = 'none';
-          }
+          if (el && typeof d.count === 'number') el.textContent = d.count.toLocaleString();
         })
-        .catch(() => {
-          const wrap = document.querySelector('.visitor-counter');
-          if (wrap) wrap.style.display = 'none';
-        });
+        .catch(() => {});
 
       // Newsletter form
       const form = document.getElementById('newsletterForm');
