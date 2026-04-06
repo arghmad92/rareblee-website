@@ -334,9 +334,17 @@ const { title = "RareBlee — Glow Different", description = "Glow Drop Body Fil
         .then(r => r.json())
         .then(d => {
           const el = document.getElementById('visitorCount');
-          if (el && d.count) el.textContent = d.count.toLocaleString();
+          const wrap = el?.closest('.visitor-counter');
+          if (el && d.count > 0) {
+            el.textContent = d.count.toLocaleString();
+          } else if (wrap) {
+            wrap.style.display = 'none';
+          }
         })
-        .catch(() => {});
+        .catch(() => {
+          const wrap = document.querySelector('.visitor-counter');
+          if (wrap) wrap.style.display = 'none';
+        });
 
       // Newsletter form
       const form = document.getElementById('newsletterForm');
