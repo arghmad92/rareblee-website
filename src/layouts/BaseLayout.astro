@@ -229,10 +229,14 @@ const { title = "RareBlee — Glow Different", description = "Glow Drop Body Fil
     <slot />
 
     <script>
-      // Page loader
-      window.addEventListener('load', () => {
-        document.getElementById('pageLoader')?.classList.add('loaded');
-      });
+      // Page loader — hide after DOM ready or 2s max
+      const hideLoader = () => document.getElementById('pageLoader')?.classList.add('loaded');
+      if (document.readyState === 'complete') {
+        hideLoader();
+      } else {
+        document.addEventListener('DOMContentLoaded', hideLoader);
+        setTimeout(hideLoader, 2000);
+      }
 
       // Custom cursor
       const dot = document.getElementById('cursorDot');
