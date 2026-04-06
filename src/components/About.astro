@@ -1,0 +1,213 @@
+---
+---
+
+<section class="about" id="about">
+  <div class="container about-inner">
+    <div class="about-image reveal-left">
+      <div class="about-img-wrap">
+        <img src="/images/products/hands-holding.jpeg" alt="Hands holding Glow Drop Pink Bloom and Green Bliss" />
+        <!-- Floating accent card -->
+        <div class="about-float-card">
+          <span class="float-emoji">&#127807;</span>
+          <span>Made with love in Malaysia</span>
+        </div>
+      </div>
+    </div>
+    <div class="about-content">
+      <p class="section-label reveal">Our Story</p>
+      <h2 class="reveal" style="transition-delay: 0.1s">We Are <span class="text-script">RareBlee</span></h2>
+      <p class="reveal" style="transition-delay: 0.15s">
+        Born from the belief that body care should be fun, natural, and empowering.
+        RareBlee creates products that make you feel confident in your own skin —
+        without compromising on what goes into them.
+      </p>
+      <p class="reveal" style="transition-delay: 0.2s">
+        Glow Drop is our first love letter to you. A body filter deodorant that
+        doesn't just keep you fresh — it makes you glow. Made with skin-safe,
+        natural ingredients and packed in packaging that's as cute as it is conscious.
+      </p>
+
+      <div class="about-stats reveal" style="transition-delay: 0.3s">
+        <div class="stat">
+          <span class="stat-number" data-count="100" data-suffix="%">0%</span>
+          <span class="stat-bar pink-bar"></span>
+          <span class="stat-label">Natural Ingredients</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-count="0" data-suffix="%">0%</span>
+          <span class="stat-bar green-bar"></span>
+          <span class="stat-label">Harsh Chemicals</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-count="24" data-suffix="hr">0hr</span>
+          <span class="stat-bar gold-bar"></span>
+          <span class="stat-label">Freshness</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    padding: 120px 0;
+    background: var(--cream);
+    position: relative;
+    overflow: clip;
+  }
+
+  .about::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(245, 198, 208, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .about-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .about-img-wrap {
+    position: relative;
+  }
+
+  .about-image img {
+    border-radius: 28px;
+    width: 100%;
+    height: 540px;
+    object-fit: cover;
+    box-shadow: 0 20px 60px rgba(27, 61, 47, 0.08);
+  }
+
+  .about-float-card {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: var(--white);
+    border-radius: 16px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 8px 32px rgba(27, 61, 47, 0.08);
+    animation: floatBounce 4s ease-in-out infinite;
+  }
+
+  .float-emoji {
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+
+  .about-float-card span {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--green);
+  }
+
+  @keyframes floatBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  .section-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--pink-dark);
+    margin-bottom: 16px;
+  }
+
+  .about-content h2 {
+    font-size: 3rem;
+    color: var(--green);
+    margin-bottom: 28px;
+    letter-spacing: -0.01em;
+  }
+
+  .text-script {
+    color: var(--pink-dark);
+    position: relative;
+  }
+
+  .about-content p {
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.85;
+    margin-bottom: 16px;
+  }
+
+  .about-stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(27, 61, 47, 0.08);
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .stat-number {
+    font-family: 'Roca', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--green);
+    line-height: 1;
+  }
+
+  .stat-bar {
+    width: 32px;
+    height: 3px;
+    border-radius: 2px;
+  }
+
+  .pink-bar { background: var(--pink-dark); }
+  .green-bar { background: var(--green); }
+  .gold-bar { background: #D4A574; }
+
+  .stat-label {
+    font-size: 0.78rem;
+    color: var(--text-light);
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    .about {
+      padding: 80px 0;
+    }
+
+    .about-inner {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+
+    .about-image img {
+      height: 380px;
+    }
+
+    .about-content h2 {
+      font-size: 2.4rem;
+    }
+
+    .about-stats {
+      gap: 24px;
+    }
+
+    .about-float-card {
+      right: 12px;
+      bottom: 12px;
+    }
+  }
+</style>

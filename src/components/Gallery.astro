@@ -1,0 +1,188 @@
+---
+---
+
+<section class="gallery">
+  <div class="container">
+    <div class="gallery-top reveal">
+      <div class="gallery-header">
+        <p class="section-label">Gallery</p>
+        <h2>The Glow Drop Look</h2>
+      </div>
+      <p class="gallery-desc">A closer look at our products — crafted with care, designed to make you glow.</p>
+    </div>
+  </div>
+
+  <!-- Horizontal scroll strip -->
+  <div class="gallery-scroll">
+    <div class="gallery-track">
+      <div class="gallery-card">
+        <img src="/images/products/hand-lift-foam.jpeg" alt="Hand lifting foam from tube" />
+      </div>
+      <div class="gallery-card">
+        <img src="/images/products/caps-pattern.jpeg" alt="RareBlee caps from above" />
+      </div>
+      <div class="gallery-card wide">
+        <img src="/images/products/flatlay-editorial.jpeg" alt="Full collection flatlay" />
+      </div>
+      <div class="gallery-card">
+        <img src="/images/products/foam-duo-water.jpeg" alt="Foam bottles with water" />
+      </div>
+      <div class="gallery-card">
+        <img src="/images/products/tubes-pile.jpeg" alt="Tubes stacked together" />
+      </div>
+      <div class="gallery-card wide">
+        <img src="/images/products/foam-splash-group.jpeg" alt="Foam bottles water splash" />
+      </div>
+      <div class="gallery-card">
+        <img src="/images/products/green-bliss-cap.jpeg" alt="Green Bliss with cap" />
+      </div>
+      <div class="gallery-card">
+        <img src="/images/products/four-tubes.jpeg" alt="Four tubes lineup" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .gallery {
+    padding: 100px 0;
+    background: var(--green);
+  }
+
+  .gallery-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+    margin-bottom: 48px;
+  }
+
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--pink);
+    margin-bottom: 10px;
+  }
+
+  .gallery-header h2 {
+    font-size: 2.6rem;
+    color: var(--white);
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+  }
+
+  .gallery-desc {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5);
+    max-width: 280px;
+    line-height: 1.6;
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  /* Horizontal scroll */
+  .gallery-scroll {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    cursor: grab;
+  }
+
+  .gallery-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .gallery-scroll:active {
+    cursor: grabbing;
+  }
+
+  .gallery-track {
+    display: flex;
+    gap: 14px;
+    padding: 0 24px;
+    width: max-content;
+  }
+
+  .gallery-card {
+    width: 260px;
+    height: 340px;
+    border-radius: 18px;
+    overflow: hidden;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  .gallery-card.wide {
+    width: 400px;
+  }
+
+  .gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s var(--ease-out-expo);
+  }
+
+  .gallery-card:hover img {
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+    .gallery {
+      padding: 72px 0;
+    }
+
+    .gallery-top {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 0 24px;
+    }
+
+    .gallery-desc {
+      text-align: left;
+      max-width: 100%;
+    }
+
+    .gallery-header h2 {
+      font-size: 2rem;
+    }
+
+    .gallery-card {
+      width: 220px;
+      height: 280px;
+    }
+
+    .gallery-card.wide {
+      width: 320px;
+    }
+  }
+</style>
+
+<script>
+  // Drag to scroll
+  const scroll = document.querySelector('.gallery-scroll');
+  if (scroll) {
+    let isDown = false;
+    let startX = 0;
+    let scrollLeft = 0;
+
+    scroll.addEventListener('mousedown', (e) => {
+      isDown = true;
+      startX = e.pageX - scroll.offsetLeft;
+      scrollLeft = scroll.scrollLeft;
+    });
+    scroll.addEventListener('mouseleave', () => isDown = false);
+    scroll.addEventListener('mouseup', () => isDown = false);
+    scroll.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - scroll.offsetLeft;
+      scroll.scrollLeft = scrollLeft - (x - startX);
+    });
+  }
+</script>

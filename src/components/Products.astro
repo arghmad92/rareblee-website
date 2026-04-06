@@ -1,0 +1,322 @@
+---
+---
+
+<section class="products" id="products">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-label">Our Products</p>
+      <h2>Choose Your <span class="text-pink">Glow</span></h2>
+      <p class="section-desc">Two signature scents, two formats. Find the Glow Drop that fits your vibe.</p>
+    </div>
+
+    <div class="product-grid">
+      <div class="product-card pink-card reveal" style="transition-delay: 0.1s">
+        <div class="product-badge">Bestseller</div>
+        <div class="product-image">
+          <img src="/images/products/pink-bloom-water.jpeg" alt="Glow Drop Pink Bloom — tube and foam with water splash" />
+          <div class="product-image-overlay"></div>
+        </div>
+        <div class="product-info">
+          <div class="product-name-row">
+            <h3>Pink Bloom</h3>
+            <span class="product-icon">&#127800;</span>
+          </div>
+          <p class="product-type">Body Filter Deodorant</p>
+          <p class="product-desc">
+            A sweet, floral scent that wraps you in freshness. Soft pink petals meet
+            delicate rose notes for an all-day glow that feels like a warm hug.
+          </p>
+          <div class="product-formats">
+            <span class="format-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="2" width="12" height="20" rx="3"/></svg>
+              Tube
+            </span>
+            <span class="format-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2h8v4H8z"/><path d="M6 6h12v14a2 2 0 01-2 2H8a2 2 0 01-2-2V6z"/></svg>
+              Foam
+            </span>
+          </div>
+          <a href="#shop" class="product-btn pink-btn">
+            <span>Shop Pink Bloom</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="product-card green-card reveal" style="transition-delay: 0.25s">
+        <div class="product-badge green-badge">Fresh Pick</div>
+        <div class="product-image">
+          <img src="/images/products/green-bliss-water.jpeg" alt="Glow Drop Green Bliss — tube and foam with water splash" />
+          <div class="product-image-overlay green-overlay"></div>
+        </div>
+        <div class="product-info">
+          <div class="product-name-row">
+            <h3>Green Bliss</h3>
+            <span class="product-icon">&#127807;</span>
+          </div>
+          <p class="product-type">Body Filter Deodorant</p>
+          <p class="product-desc">
+            Cool, herbal, and oh-so-refreshing. Green tea and botanical extracts
+            keep you feeling crisp from morning to night. Nature's confidence boost.
+          </p>
+          <div class="product-formats">
+            <span class="format-tag green-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="2" width="12" height="20" rx="3"/></svg>
+              Tube
+            </span>
+            <span class="format-tag green-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2h8v4H8z"/><path d="M6 6h12v14a2 2 0 01-2 2H8a2 2 0 01-2-2V6z"/></svg>
+              Foam
+            </span>
+          </div>
+          <a href="#shop" class="product-btn green-btn">
+            <span>Shop Green Bliss</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .products {
+    padding: 120px 0;
+    background: var(--white);
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 72px;
+  }
+
+  .section-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--pink-dark);
+    margin-bottom: 16px;
+  }
+
+  .section-header h2 {
+    font-size: 3.2rem;
+    color: var(--green);
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+
+  .text-pink {
+    color: var(--pink-dark);
+  }
+
+  .section-desc {
+    font-size: 1rem;
+    color: var(--text-light);
+    max-width: 460px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+
+  .product-card {
+    position: relative;
+    background: var(--pink-light);
+    border-radius: 28px;
+    overflow: hidden;
+    transition: transform 0.5s var(--ease-out-expo), box-shadow 0.5s var(--ease-out-expo);
+    border: 1px solid rgba(245, 198, 208, 0.3);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 24px 64px rgba(27, 61, 47, 0.08);
+  }
+
+  .green-card {
+    background: #f0f7f2;
+    border-color: rgba(27, 61, 47, 0.08);
+  }
+
+  .product-badge {
+    position: absolute;
+    top: 44px;
+    left: 44px;
+    background: var(--pink-dark);
+    color: var(--white);
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 50px;
+    z-index: 2;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  .green-badge {
+    background: var(--green);
+  }
+
+  .product-image {
+    padding: 32px 32px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .product-image img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.6s var(--ease-out-expo);
+  }
+
+  .product-card:hover .product-image img {
+    transform: scale(1.03);
+  }
+
+  .product-image-overlay {
+    position: absolute;
+    inset: 32px 32px 0;
+    border-radius: 20px;
+    background: linear-gradient(to top, rgba(245, 198, 208, 0.2) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .green-overlay {
+    background: linear-gradient(to top, rgba(27, 61, 47, 0.1) 0%, transparent 50%);
+  }
+
+  .product-info {
+    padding: 28px 32px 32px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-info .product-desc {
+    flex: 1;
+  }
+
+  .product-name-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .product-info h3 {
+    font-family: 'Roca', sans-serif;
+    font-size: 2rem;
+    color: var(--green);
+  }
+
+  .product-icon {
+    font-size: 1.5rem;
+  }
+
+  .product-type {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    font-weight: 500;
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+  }
+
+  .product-desc {
+    font-size: 0.92rem;
+    color: var(--text);
+    line-height: 1.75;
+    margin-bottom: 20px;
+  }
+
+  .product-formats {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  .format-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    padding: 7px 16px;
+    border-radius: 50px;
+    background: rgba(245, 198, 208, 0.4);
+    color: var(--green);
+  }
+
+  .green-tag {
+    background: rgba(27, 61, 47, 0.08);
+  }
+
+  .product-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.88rem;
+    transition: all 0.4s var(--ease-out-expo);
+  }
+
+  .product-btn svg {
+    transition: transform 0.3s var(--ease-out-expo);
+  }
+
+  .product-btn:hover svg {
+    transform: translateX(4px);
+  }
+
+  .product-btn:hover {
+    transform: translateY(-2px);
+  }
+
+  .pink-btn {
+    background: var(--pink-dark);
+    color: var(--white);
+    box-shadow: 0 4px 16px rgba(232, 160, 176, 0.3);
+  }
+
+  .pink-btn:hover {
+    box-shadow: 0 8px 28px rgba(232, 160, 176, 0.4);
+  }
+
+  .green-btn {
+    background: var(--green);
+    color: var(--white);
+    box-shadow: 0 4px 16px rgba(27, 61, 47, 0.2);
+  }
+
+  .green-btn:hover {
+    box-shadow: 0 8px 28px rgba(27, 61, 47, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    .products {
+      padding: 80px 0;
+    }
+
+    .product-grid {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    .section-header h2 {
+      font-size: 2.4rem;
+    }
+
+    .product-image img {
+      height: 300px;
+    }
+  }
+</style>

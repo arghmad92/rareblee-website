@@ -1,0 +1,230 @@
+---
+---
+
+<section class="ingredients" id="ingredients">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-label">What's Inside</p>
+      <h2>Skin-Loving <span class="text-pink">Ingredients</span></h2>
+      <p class="section-desc">We believe in transparency. Every ingredient is chosen with care for your skin and the planet.</p>
+    </div>
+
+    <div class="ingredients-grid stagger-children">
+      <div class="ingredient-card reveal">
+        <div class="ingredient-icon-wrap">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5"><path d="M12 22c4-4 8-7.5 8-12a8 8 0 10-16 0c0 4.5 4 8 8 12z"/><path d="M12 13V7"/><path d="M9 10h6"/></svg>
+        </div>
+        <h3>Natural Botanicals</h3>
+        <p>Plant-based extracts that nourish and protect your skin while keeping you fresh throughout the day.</p>
+      </div>
+      <div class="ingredient-card reveal">
+        <div class="ingredient-icon-wrap">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        </div>
+        <h3>Gentle Fragrance</h3>
+        <p>Delicate scent notes derived from natural flowers and herbs — never overpowering, always uplifting.</p>
+      </div>
+      <div class="ingredient-card reveal">
+        <div class="ingredient-icon-wrap">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg>
+        </div>
+        <h3>Hydrating Formula</h3>
+        <p>Moisturising agents that care for your underarm skin, preventing dryness and irritation.</p>
+      </div>
+      <div class="ingredient-card reveal">
+        <div class="ingredient-icon-wrap">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <h3>No Harsh Chemicals</h3>
+        <p>Free from aluminium, parabens, and artificial colours. Only what your skin actually needs.</p>
+      </div>
+      <div class="ingredient-card reveal">
+        <div class="ingredient-icon-wrap">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </div>
+        <h3>Skin-Safe Tested</h3>
+        <p>Dermatologically tested and safe for sensitive skin. Gentle enough for everyday use.</p>
+      </div>
+      <div class="ingredient-card reveal">
+        <div class="ingredient-icon-wrap">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15 15 0 014 10 15 15 0 01-4 10 15 15 0 01-4-10 15 15 0 014-10z"/></svg>
+        </div>
+        <h3>Eco-Conscious</h3>
+        <p>Thoughtfully packaged with sustainability in mind. Looking good, doing good.</p>
+      </div>
+    </div>
+
+    <div class="ingredients-banner reveal-scale" style="transition-delay: 0.2s">
+      <img src="/images/products/foam-splash-flatlay.jpeg" alt="Glow Drop foam bottles with water splash" />
+      <div class="banner-overlay">
+        <div class="banner-text">
+          <span class="banner-label">The Full Collection</span>
+          <h3>4 Products. 2 Scents. Endless Glow.</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .ingredients {
+    padding: 120px 0;
+    background: var(--white);
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 72px;
+  }
+
+  .section-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--pink-dark);
+    margin-bottom: 16px;
+  }
+
+  .section-header h2 {
+    font-size: 3.2rem;
+    color: var(--green);
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+
+  .text-pink {
+    color: var(--pink-dark);
+  }
+
+  .section-desc {
+    font-size: 1rem;
+    color: var(--text-light);
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  .ingredients-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 72px;
+  }
+
+  .ingredient-card {
+    background: var(--cream);
+    border-radius: 24px;
+    padding: 36px 28px;
+    transition: all 0.4s var(--ease-out-expo);
+    border: 1px solid transparent;
+  }
+
+  .ingredient-card:hover {
+    transform: translateY(-6px);
+    background: var(--white);
+    border-color: rgba(245, 198, 208, 0.3);
+    box-shadow: 0 16px 48px rgba(27, 61, 47, 0.06);
+  }
+
+  .ingredient-icon-wrap {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: var(--pink-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: background 0.3s;
+  }
+
+  .ingredient-card:hover .ingredient-icon-wrap {
+    background: var(--pink);
+  }
+
+  .ingredient-card h3 {
+    font-family: 'Roca', sans-serif;
+    font-size: 1.15rem;
+    color: var(--green);
+    margin-bottom: 10px;
+  }
+
+  .ingredient-card p {
+    font-size: 0.88rem;
+    color: var(--text-light);
+    line-height: 1.7;
+  }
+
+  /* Banner with overlay */
+  .ingredients-banner {
+    border-radius: 28px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .ingredients-banner img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    transition: transform 0.6s var(--ease-out-expo);
+  }
+
+  .ingredients-banner:hover img {
+    transform: scale(1.03);
+  }
+
+  .banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(27, 61, 47, 0.75) 0%, rgba(27, 61, 47, 0.3) 50%, transparent 100%);
+    display: flex;
+    align-items: flex-end;
+    padding: 48px;
+    border-radius: 28px;
+  }
+
+  .banner-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--pink);
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .banner-text h3 {
+    font-family: 'Roca', sans-serif;
+    font-size: 2rem;
+    color: var(--white);
+    max-width: 360px;
+  }
+
+  @media (max-width: 768px) {
+    .ingredients {
+      padding: 80px 0;
+    }
+
+    .ingredients-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .section-header h2 {
+      font-size: 2.4rem;
+    }
+
+    .ingredients-banner img {
+      height: 280px;
+    }
+
+    .banner-overlay {
+      padding: 28px;
+    }
+
+    .banner-text h3 {
+      font-size: 1.4rem;
+    }
+  }
+</style>

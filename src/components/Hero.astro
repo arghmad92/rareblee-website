@@ -1,0 +1,309 @@
+---
+---
+
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <div class="hero-label-wrap reveal">
+        <span class="hero-pill">New Launch</span>
+        <p class="hero-label">Body Filter Deodorant</p>
+      </div>
+      <h1 class="reveal" style="transition-delay: 0.1s">
+        Glow<br />
+        <span class="highlight">Different.</span>
+      </h1>
+      <p class="hero-desc reveal" style="transition-delay: 0.2s">
+        Meet Glow Drop — the deodorant that does more. Natural ingredients,
+        skin-loving formula, and a scent that stays with you all day.
+      </p>
+      <div class="hero-actions reveal" style="transition-delay: 0.3s">
+        <a href="#products" class="btn btn-primary">
+          <span>Explore Products</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="#about" class="btn btn-secondary">Our Story</a>
+      </div>
+      <div class="hero-trust reveal" style="transition-delay: 0.4s">
+        <div class="trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--green)" opacity="0.6"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          <span>100% Natural</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--green)" opacity="0.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Skin Safe</span>
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--green)" opacity="0.6"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <span>Cruelty Free</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image reveal-scale" style="transition-delay: 0.2s">
+      <div class="hero-img-wrap">
+        <img src="/images/products/flatlay-diagonal.jpeg" alt="Glow Drop Body Filter Deodorant — full collection flatlay" />
+        <div class="hero-img-badge">
+          <span class="badge-text">2 Scents</span>
+          <span class="badge-sub">Pink Bloom & Green Bliss</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0 120L60 110C120 100 240 80 360 68C480 56 600 52 720 56C840 60 960 72 1080 76C1200 80 1320 76 1380 74L1440 72V120H0Z" fill="white"/>
+    </svg>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    background: linear-gradient(160deg, var(--pink-light) 0%, var(--pink) 40%, #f0b8c5 70%, #e9a8b8 100%);
+    padding: 160px 0 120px;
+    overflow: hidden;
+  }
+
+
+
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+  }
+
+  .hero-label-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .hero-pill {
+    display: inline-block;
+    background: var(--green);
+    color: var(--white);
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 5px 14px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .hero-label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--green);
+    opacity: 0.6;
+  }
+
+  .hero h1 {
+    font-size: 5.5rem;
+    color: var(--green);
+    margin-bottom: 28px;
+    letter-spacing: -0.02em;
+  }
+
+  .highlight {
+    display: inline-block;
+    position: relative;
+  }
+
+  .highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    right: 0;
+    height: 12px;
+    background: rgba(245, 198, 208, 0.6);
+    border-radius: 4px;
+    z-index: -1;
+  }
+
+  .hero-desc {
+    font-size: 1.05rem;
+    color: var(--green);
+    opacity: 0.7;
+    max-width: 440px;
+    margin-bottom: 36px;
+    line-height: 1.8;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 15px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.01em;
+    transition: all 0.4s var(--ease-out-expo);
+  }
+
+  .btn svg {
+    transition: transform 0.3s var(--ease-out-expo);
+  }
+
+  .btn:hover svg {
+    transform: translateX(4px);
+  }
+
+  .btn-primary {
+    background: var(--green);
+    color: var(--white);
+    box-shadow: 0 4px 20px rgba(27, 61, 47, 0.2), 0 1px 3px rgba(27, 61, 47, 0.1);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 36px rgba(27, 61, 47, 0.25), 0 2px 6px rgba(27, 61, 47, 0.1);
+  }
+
+  .btn-secondary {
+    background: rgba(255, 255, 255, 0.6);
+    color: var(--green);
+    backdrop-filter: blur(10px);
+    border: 1.5px solid rgba(27, 61, 47, 0.15);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-3px);
+  }
+
+  /* Trust badges */
+  .hero-trust {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.78rem;
+    color: var(--green);
+    opacity: 0.6;
+    font-weight: 500;
+  }
+
+  .trust-divider {
+    width: 1px;
+    height: 16px;
+    background: rgba(27, 61, 47, 0.15);
+  }
+
+  /* Hero image */
+  .hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-img-wrap {
+    position: relative;
+    width: 100%;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 560px;
+    object-fit: cover;
+    border-radius: 28px;
+    box-shadow: 0 24px 80px rgba(27, 61, 47, 0.12), 0 8px 24px rgba(27, 61, 47, 0.08);
+  }
+
+  .hero-img-badge {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 14px 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  }
+
+  .badge-text {
+    display: block;
+    font-family: 'Roca', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--green);
+  }
+
+  .badge-sub {
+    font-size: 0.75rem;
+    color: var(--text-light);
+  }
+
+  .hero-wave {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  }
+
+  .hero-wave svg {
+    display: block;
+    width: 100%;
+    height: 80px;
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding: 120px 0 80px;
+    }
+
+    .hero-inner {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 40px;
+    }
+
+    .hero-label-wrap {
+      justify-content: center;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+    }
+
+    .hero-desc {
+      margin: 0 auto 36px;
+    }
+
+    .hero-actions {
+      justify-content: center;
+    }
+
+    .hero-trust {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .hero-image img {
+      height: 380px;
+    }
+  }
+</style>
