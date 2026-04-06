@@ -21,6 +21,15 @@
   </div>
 </nav>
 
+<!-- Mobile menu overlay (outside scoped styles) -->
+<div class="mobile-menu-overlay" id="mobileOverlay">
+  <a href="#products" class="mobile-link">Products</a>
+  <a href="#about" class="mobile-link">About</a>
+  <a href="#ingredients" class="mobile-link">Ingredients</a>
+  <a href="#contact" class="mobile-link">Contact</a>
+  <a href="https://s.shopee.com.my/4LFEFF1G34" class="mobile-link mobile-cta" target="_blank" rel="noopener">Shop Now</a>
+</div>
+
 <style>
   .navbar {
     position: fixed;
@@ -131,7 +140,7 @@
     cursor: pointer;
     padding: 8px;
     position: relative;
-    z-index: 101;
+    z-index: 201;
   }
 
   .nav-toggle span {
@@ -144,6 +153,62 @@
     transform-origin: center;
   }
 
+  @media (max-width: 768px) {
+    .nav-toggle {
+      display: flex;
+    }
+
+    .nav-links {
+      display: none;
+    }
+  }
+</style>
+
+<style is:global>
+  /* Mobile menu overlay — global styles so JS class toggling works */
+  .mobile-menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ffffff;
+    z-index: 200;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    padding: 80px 24px;
+  }
+
+  .mobile-menu-overlay.open {
+    display: flex;
+  }
+
+  .mobile-link {
+    font-family: 'Roca', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1B3D2F;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+
+  .mobile-link:hover {
+    opacity: 0.6;
+  }
+
+  .mobile-cta {
+    background: #1B3D2F;
+    color: #ffffff !important;
+    padding: 12px 32px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    margin-top: 8px;
+  }
+
+  /* Hamburger X animation */
   .nav-toggle.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
   }
@@ -156,65 +221,28 @@
     transform: rotate(-45deg) translate(5px, -5px);
   }
 
-  @media (max-width: 768px) {
-    .nav-toggle {
-      display: flex;
-      z-index: 200;
-    }
-
-    .nav-links {
+  /* Hide mobile overlay on desktop */
+  @media (min-width: 769px) {
+    .mobile-menu-overlay {
       display: none !important;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: var(--white);
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 32px;
-      z-index: 150;
-      padding: 80px 24px;
-    }
-
-    .nav-links.open {
-      display: flex !important;
-      animation: fadeIn 0.3s var(--ease-out-expo);
-    }
-
-    .nav-links li {
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-size: 1.3rem;
-      font-weight: 600;
-    }
-
-    .nav-links a::after {
-      display: none;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
     }
   }
 </style>
 
 <script>
   const toggle = document.getElementById('navToggle');
-  const links = document.getElementById('navLinks');
+  const overlay = document.getElementById('mobileOverlay');
+
   toggle?.addEventListener('click', () => {
     toggle.classList.toggle('active');
-    links?.classList.toggle('open');
-    document.body.style.overflow = links?.classList.contains('open') ? 'hidden' : '';
+    overlay?.classList.toggle('open');
+    document.body.style.overflow = overlay?.classList.contains('open') ? 'hidden' : '';
   });
-  links?.querySelectorAll('a').forEach(a => {
+
+  overlay?.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', () => {
       toggle?.classList.remove('active');
-      links?.classList.remove('open');
+      overlay?.classList.remove('open');
       document.body.style.overflow = '';
     });
   });
