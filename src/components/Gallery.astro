@@ -176,8 +176,7 @@
       startX = e.pageX - scroll.offsetLeft;
       scrollLeft = scroll.scrollLeft;
     });
-    scroll.addEventListener('mouseleave', () => isDown = false);
-    scroll.addEventListener('mouseup', () => isDown = false);
+    document.addEventListener('mouseup', () => isDown = false);
     scroll.addEventListener('mousemove', (e) => {
       if (!isDown) return;
       e.preventDefault();

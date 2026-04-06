@@ -291,33 +291,65 @@ const { title = "RareBlee — Glow Different", description = "Glow Drop Body Fil
         countObserver.observe(el);
       });
 
-      // Parallax on scroll
+      // Throttled scroll handler for parallax + navbar
+      let lastScroll = 0;
+      let ticking = false;
+      const navbar = document.querySelector('.navbar');
+      const parallaxEls = document.querySelectorAll('[data-parallax]');
+
       window.addEventListener('scroll', () => {
-        const scrolled = window.scrollY;
-        document.querySelectorAll('[data-parallax]').forEach(el => {
-          const speed = parseFloat(el.getAttribute('data-parallax') || '0.3');
-          el.style.transform = `translateY(${scrolled * speed}px)`;
-        });
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            const scrolled = window.scrollY;
+
+            // Parallax
+            parallaxEls.forEach(el => {
+              const speed = Math.max(-1, Math.min(1, parseFloat(el.getAttribute('data-parallax') || '0.3')));
+              el.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+
+            // Navbar
+            if (navbar) {
+              if (scrolled > 80) {
+                navbar.classList.add('scrolled');
+              } else {
+                navbar.classList.remove('scrolled');
+              }
+              if (scrolled > lastScroll && scrolled > 400) {
+                navbar.classList.add('hidden');
+              } else {
+                navbar.classList.remove('hidden');
+              }
+            }
+
+            lastScroll = scrolled;
+            ticking = false;
+          });
+          ticking = true;
+        }
       });
 
-      // Navbar scroll effect
-      let lastScroll = 0;
-      const navbar = document.querySelector('.navbar');
-      window.addEventListener('scroll', () => {
-        const currentScroll = window.scrollY;
-        if (navbar) {
-          if (currentScroll > 80) {
-            navbar.classList.add('scrolled');
-          } else {
-            navbar.classList.remove('scrolled');
-          }
-          if (currentScroll > lastScroll && currentScroll > 400) {
-            navbar.classList.add('hidden');
-          } else {
-            navbar.classList.remove('hidden');
-          }
+      // Visitor counter
+      fetch('/api/visitors')
+        .then(r => r.json())
+        .then(d => {
+          const el = document.getElementById('visitorCount');
+          if (el && d.count) el.textContent = d.count.toLocaleString();
+        })
+        .catch(() => {});
+
+      // Newsletter form
+      const form = document.getElementById('newsletterForm');
+      const msg = document.getElementById('newsletterMsg');
+      form?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = document.getElementById('newsletterEmail');
+        if (email?.value && msg) {
+          msg.textContent = 'Thanks! We\'ll keep you in the glow.';
+          msg.classList.add('show');
+          email.value = '';
+          setTimeout(() => msg.classList.remove('show'), 4000);
         }
-        lastScroll = currentScroll;
       });
     </script>
   </body>
